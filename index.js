@@ -13,7 +13,9 @@ const JWT_SECRET = "mySuperSecretKey";
 const auth = require("./middleware/auth"); 
 
 const db = require("./db");
-
+app.get("/", (req, res) => {
+  res.redirect("/api-docs");
+});
 // Swagger Setup
 const options = {
     definition: {
